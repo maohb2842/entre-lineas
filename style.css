@@ -1,0 +1,306 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    145deg,
+    #22151d,
+    #4c2537,
+    #24161e
+  );
+  color: #fff3f5;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 50px 0 30px;
+  text-align: center;
+}
+
+.rosa {
+  font-size: 65px;
+  margin-bottom: 15px;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.subtitulo {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #e4afbd;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 43px;
+  margin: 12px 0;
+}
+
+.dedicatoria {
+  color: #f1bacb;
+  margin-bottom: 35px;
+}
+
+.tarjeta {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 22px;
+  padding: 30px 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  animation: aparecer 0.7s ease;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 22px;
+}
+
+.tarjeta p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 17px;
+  color: #f3dfe5;
+}
+
+.instruccion {
+  margin-top: 25px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border: 1px solid #e2b6c3;
+  border-radius: 12px;
+  background: #fff6f8;
+  color: #38202b;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  border-color: #e98ca8;
+  box-shadow: 0 0 0 3px rgba(233,140,168,0.2);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #e7a2b6;
+  color: #351d29;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: #f4bed0;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #ffb5b5 !important;
+  margin-top: 12px;
+}
+
+.oculto {
+  display: none;
+}
+
+.corazon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  animation: latido 1.8s infinite;
+}
+
+.mensaje-especial {
+  color: #f6b6cb !important;
+  font-weight: 600;
+}
+
+.recuerdo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.recuerdo span {
+  color: #f5bbcb;
+  font-size: 11px;
+}
+
+footer {
+  margin-top: 35px;
+  font-size: 11px;
+  color: #d2a9b7;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+
+/* ===== LA ROSA ANIMADA ===== */
+
+.escena-rosa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 190px;
+  margin-bottom: 20px;
+}
+
+.flor-animada {
+  position: relative;
+  animation: florecer 2.5s ease-out both;
+}
+
+.flor {
+  font-size: 110px;
+  filter: drop-shadow(0 8px 25px rgba(255, 92, 138, 0.35));
+}
+
+.brillos {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  font-size: 23px;
+  color: #ffd7e3;
+  animation: brillar 2s ease-in-out infinite;
+}
+
+.frase-flor {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px !important;
+  color: #ffd6e2 !important;
+  font-style: italic;
+}
+
+/* ===== TARJETA DE RECUERDO ===== */
+
+.tarjeta-recuerdo {
+  background: linear-gradient(
+    150deg,
+    #6b354d,
+    #3c2230
+  );
+  border: 1px solid rgba(255, 205, 220, 0.3);
+  border-radius: 20px;
+  padding: 25px 20px;
+  margin: 25px 0;
+}
+
+.recuerdo-icono {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.recuerdo-etiqueta {
+  font-size: 10px !important;
+  letter-spacing: 2px;
+  color: #eeb9c9 !important;
+}
+
+.tarjeta-recuerdo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.boton-secreto {
+  background: transparent;
+  border: 1px solid #e7a2b6;
+  color: #ffe3eb;
+  font-size: 13px;
+}
+
+.simbolo-oculto {
+  margin-top: 25px;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  animation: aparecer 1s ease;
+}
+
+.simbolo {
+  font-size: 55px;
+  color: #ffd5a8;
+  animation: brillar 2s ease-in-out infinite;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes florecer {
+  0% {
+    opacity: 0;
+    transform: scale(0.15) rotate(-15deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes brillar {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Mantener ocultos los elementos secretos */
+.oculto {
+  display: none;
+}
