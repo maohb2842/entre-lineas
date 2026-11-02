@@ -91,21 +91,28 @@ const simboloOculto =
 const estrellaDescubierta =
   localStorage.getItem("estrellaDescubierta") === "true";
 
+
 if (estrellaDescubierta) {
   simboloOculto.classList.remove("oculto");
   botonSimbolo.textContent = "Estrella descubierta ✦";
+  botonSimbolo.disabled = true;
 }
 
+
 // Mostrar el símbolo al tocar el botón
+
 botonSimbolo.addEventListener("click", () => {
 
   simboloOculto.classList.remove("oculto");
 
   botonSimbolo.textContent = "Estrella descubierta ✦";
 
+  botonSimbolo.disabled = true;
+
   localStorage.setItem("estrellaDescubierta", "true");
 
 });
+
 
 
 const volverSorpresa =

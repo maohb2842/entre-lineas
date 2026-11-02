@@ -304,3 +304,112 @@ footer {
 .oculto {
   display: none;
 }
+
+
+
+/* ===== PERSONALIZACIÓN ===== */
+
+.frase-inicial {
+  max-width: 350px;
+  margin: -15px auto 30px;
+  color: #e7bfcc;
+  font-size: 13px;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ===== REVELACIÓN ROMÁNTICA ===== */
+
+.revelar-texto {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+/* Solo animamos cuando la sorpresa es visible */
+#sorpresa:not(.oculto) .revelar-texto {
+  animation: revelarMensaje 1.2s ease forwards;
+}
+
+#sorpresa:not(.oculto) .revelar-texto:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+#sorpresa:not(.oculto) .revelar-texto:nth-of-type(2) {
+  animation-delay: 1.3s;
+}
+
+#sorpresa:not(.oculto) .revelar-texto:nth-of-type(3) {
+  animation-delay: 2.1s;
+}
+
+#sorpresa:not(.oculto) .revelar-texto:nth-of-type(4) {
+  animation-delay: 2.9s;
+}
+
+@keyframes revelarMensaje {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ESTRELLA SECRETA ===== */
+
+.mensaje-estrella {
+  color: #ffd5a8 !important;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px !important;
+}
+
+/* ===== DETALLES PARA CELULAR ===== */
+
+@media (max-width: 480px) {
+  .contenedor {
+    width: 92%;
+    padding-top: 35px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .tarjeta {
+    padding: 25px 20px;
+  }
+
+  .flor {
+    font-size: 95px;
+  }
+}
+
+/* Accesibilidad: reducir animaciones si se solicita */
+@media (prefers-reduced-motion: reduce) {
+  .revelar-texto,
+  #sorpresa:not(.oculto) .revelar-texto {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+
+.nota-romantica {
+  margin-top: 18px;
+  font-size: 12px !important;
+  color: #dcb6c3 !important;
+  font-style: italic;
+}
+
+
+#botonSimbolo:disabled {
+  cursor: default;
+  opacity: 0.75;
+  box-shadow: none;
+  transform: none;
+  pointer-events: none;
+}
