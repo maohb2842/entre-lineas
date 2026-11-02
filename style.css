@@ -413,3 +413,39 @@ footer {
   transform: none;
   pointer-events: none;
 }
+
+
+/* ===== FRAGMENTO SECRETO ===== */
+
+.fragmento-secreto {
+  margin-top: 25px;
+  padding: 22px 15px;
+  border: 1px solid rgba(255, 215, 225, 0.35);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.07);
+  text-align: center;
+}
+
+.fragmento-etiqueta {
+  font-size: 10px !important;
+  letter-spacing: 2px;
+  color: #e8b9ca !important;
+  margin-bottom: 12px;
+}
+
+.fragmento-palabra {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #ffe0b2;
+  margin: 10px 0 15px;
+  text-shadow: 0 0 18px rgba(255, 224, 178, 0.2);
+}
+
+.fragmento-pista {
+  font-size: 13px !important;
+  line-height: 1.8;
+  color: #f2d9e2 !important;
+  font-style: italic;
+}
